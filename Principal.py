@@ -8,10 +8,12 @@ if __name__ == "__main__":
     def op2():
         Lista.AcumulaCantidad(numero)
     def op3():
-        Lista.CanjearMilla()
-        pass
+        canjear = int(input("Ingrese cantidad de millas a Canjear: "))
+        Lista.CanjearMilla(numero,canjear)
+    def op4():
+        print("Pulse una tecla para continuar.....")
     numero = input("Ingrese numero del viajero a consultar ")
-    diccionario = {1:op1,2:op2,3:op3}
+    diccionario = {1:op1,2:op2,3:op3,4:op4}
 
     while int(numero) < int(Lista.GetTamañodeLista()) and numero != -1:    
         opcion = None
@@ -25,3 +27,7 @@ if __name__ == "__main__":
             op()
         numero = input("Ingrese numero del viajero a consultar ")
         
+            
+            
+
+    
