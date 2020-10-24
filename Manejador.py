@@ -29,7 +29,7 @@ class Listaiviajero():
         posicion = self.Buscar(Nv)
         print(posicion)
         if posicion != -1:
-            print("La cantidad total de millas acumuladas en de ",self.__lista[posicion].cantidadTotaldeMillas())
+            print("La cantidad total de millas acumuladas en de ",self.__lista[posicion].getMillas())
         else:
             print("No existe el Viajero")
     def GetTamañodeLista(self):
@@ -42,7 +42,15 @@ class Listaiviajero():
             print("Millas añadidas sastifactoriamete")
         else:
             print("El viajero no existe ")
-    def CanjearMilla(self):
-        pass
+    def CanjearMilla(self,Nv,canje):
+        posicion = self.Buscar(Nv)
+        if posicion != -1:
+            if canje <= int(self.__lista[posicion].getMillas()):
+                self.__lista[posicion].CanjearMillas(canje)
+                print("La cantidad de millas restantes es: {}".format(self.__lista[posicion].getMillas()))
+            else:
+                print("Error,la cantidad solicitada es mayor que la que tiene el viajero")
+        else:
+            print("No se encontro numero de viajero")
 
 
