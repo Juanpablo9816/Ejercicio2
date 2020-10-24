@@ -14,10 +14,10 @@ class ViajeroFrecuente():
 
     def AcumularMillas(self,Mill):
         self.__Millas =self.__Millas+Mill
-    def CanjearMillas(self,Mill):
-        pass
+    def CanjearMillas (self, cantidad):
+        self.__Millas -= cantidad
     def getnum(self):
         return self.__NViajero
-    def cantidadTotaldeMillas(self):
+    def getMillas(self):
         return self.__Millas
     
